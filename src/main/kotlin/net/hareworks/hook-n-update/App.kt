@@ -9,6 +9,5 @@ public class App : JavaPlugin() {
 	}
 	override fun onEnable() {
         instance = this
-		logger.info("SamplePlugin enabled!!!!")
     }
 }
