@@ -1,4 +1,4 @@
-package net.hareworks.sampleplugin;
+package net.hareworks.develop-util;
 
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -9,5 +9,5 @@ public class App : JavaPlugin() {
 	}
 	override fun onEnable() {
         instance = this
-    }
+  }
 }

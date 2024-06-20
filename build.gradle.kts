@@ -28,9 +28,9 @@ tasks {
 }
 
 bukkit {
-    main = "net.hareworks.hook-n-update.App"
-    name = "Hook-n-Update"
-    description = "Publish Webhook to automatically update your plugin."
+    main = "net.hareworks.develop-util.App"
+    name = "Developter's Utility"
+    description = ""
     version = getVersion().toString()
     apiVersion = "1.20.6"
     authors =
@@ -38,16 +38,16 @@ bukkit {
                 "Hare-K02",
             )
     commands {
-        register("hnu") {
-            description = "hook-n-update command"
-            usage = "/hnu"
-            permission = "hnu.command"
+        register("devu") {
+            description = "develop-util command"
+            usage = "/devu"
+            permission = "devu.command"
             permissionMessage = "You don't have permission to use this command."
         }
     }
     permissions {
-        register("hnu.command") {
-            description = "Allows the player to use /hooknupdate command"
+        register("devu.command") {
+            description = "Allows the player to use /devu command"
             default = BukkitPluginDescription.Permission.Default.OP
         }
 		}
