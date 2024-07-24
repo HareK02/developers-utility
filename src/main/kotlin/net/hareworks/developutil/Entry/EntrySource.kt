@@ -1,10 +1,12 @@
-package net.hareworks.developutil.entry.source;
+package net.hareworks.developutil.entry.source
 
 public abstract class EntrySource {
   abstract val type: EntrySourceType
 
   enum class EntrySourceType {
-      HTTP, GIT_SSH, GIT_HTTP,
+    HTTP,
+    GIT_SSH,
+    GIT_HTTP,
   }
 }
 
@@ -14,8 +16,8 @@ public class Http : EntrySource {
   val basicAuth: String?
 
   constructor(url: String, basicAuth: String? = null) {
-      this.url = url
-      this.basicAuth = basicAuth
+    this.url = url
+    this.basicAuth = basicAuth
   }
 }
 
@@ -28,11 +30,11 @@ public class GitHttp : EntrySource {
   val password: String
 
   constructor(url: String, branch: String, path: String, username: String, password: String) {
-      this.url = url
-      this.branch = branch
-      this.path = path
-      this.username = username
-      this.password = password
+    this.url = url
+    this.branch = branch
+    this.path = path
+    this.username = username
+    this.password = password
   }
 }
 
@@ -45,10 +47,10 @@ public class GitSsh : EntrySource {
   val publicKey: String
 
   constructor(url: String, branch: String, path: String, privateKey: String, publicKey: String) {
-      this.url = url
-      this.branch = branch
-      this.path = path
-      this.privateKey = privateKey
-      this.publicKey = publicKey
+    this.url = url
+    this.branch = branch
+    this.path = path
+    this.privateKey = privateKey
+    this.publicKey = publicKey
   }
 }
