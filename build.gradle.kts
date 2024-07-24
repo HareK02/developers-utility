@@ -22,14 +22,14 @@ java {
 }
 tasks {
     shadowJar {
-        archiveBaseName.set("JarName")
+        archiveBaseName.set("DevUtil")
         archiveClassifier.set("")
     }
 }
 
 bukkit {
-    main = "net.hareworks.develop-util.App"
-    name = "Developter's Utility"
+    main = "net.hareworks.developutil.App"
+    name = "DevelopersUtility"
     description = ""
     version = getVersion().toString()
     apiVersion = "1.20.6"

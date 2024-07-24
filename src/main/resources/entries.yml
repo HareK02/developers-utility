@@ -1,0 +1,12 @@
+entries:
+  - title: DevelopersUtility
+    type: plugin # | plugin | datapack |
+    source:
+      type: GIT-SSH # | HTTP | GIT-HTTP | GIT-SSH |
+      key: "ssh-devutl"
+      url: "git@github.com:HareK02/developers-utility.git"
+  - title: TestDatapack
+    type: datapack
+    source:
+      type: "FILE-HTTP"
+      url: "https://example.com/datapack.zip"
