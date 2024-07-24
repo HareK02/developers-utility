@@ -9,6 +9,7 @@
         },
         "ghcr.io/mikaello/devcontainer-features/kotlinc:1": {}
     },
+    "postStartCommand": "git config --global --add safe.directory ${containerWorkspaceFolder}",
     "customizations": {
         "vscode": {
             "extensions": [
