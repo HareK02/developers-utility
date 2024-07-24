@@ -1,7 +1,6 @@
 package net.hareworks.developutil
 
 import java.io.File
-import net.hareworks.developutil.entry.Entry
 import org.bukkit.configuration.file.YamlConfiguration
 import org.bukkit.plugin.java.JavaPlugin
 
@@ -12,11 +11,10 @@ public class App : JavaPlugin() {
   }
   override fun onEnable() {
     instance = this
-    initEntries()
-    Key.initialize()
+    initConfig()
   }
 
-  fun initEntries() {
+  fun initConfig() {
     val file = File(getDataFolder(), "entries.yml")
     if (!file.exists()) {
       file.getParentFile().mkdirs()
@@ -31,5 +29,12 @@ public class App : JavaPlugin() {
     config.getMapList("entries")?.forEach { entry ->
       App.instance.getLogger().info("Loading entry: $entry")
     }
+
+    File(getDataFolder(), "ssh").run {
+      if (!exists()) {
+        mkdirs()
+      }
+    }
+    Key.initialize()
   }
 }
